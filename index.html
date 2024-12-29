@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    
+    <style>
+       /* Please Add All The Styles Here in the Style Tag */
+       body {
+        font-family: Arial, sans-serif;
+        background-color: #D3D3D3;
+        color: #333;
+      }
+      header {
+        text-align: center;
+        padding: 20px;
+        background-color: #0073e6;
+        color: white;
+      }
+      .profile-pic {
+        width: 150px;
+        border-radius: 50%;
+        display: block;
+        margin: 20px auto;
+      }
+      section {
+        padding: 20px;
+        margin: 10px auto;
+        max-width: 800px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #0073e6;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      .skill {
+        padding: 10px;
+        margin: 5px 0;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+        transition: background-color 0.3s;
+      }
+      .skill:hover {
+        background-color: #0073e6;
+        color: white;
+      }
+      .project {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      .project h3 {
+        margin: 0;
+      }
+      #contact {
+        text-align: center;
+      }
+      #contact-btn {
+        padding: 10px 20px;
+        background-color: #0073e6;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      #contact-btn:hover {
+        background-color: #005bb5;
+      }
+       
+    </style>
+  </head>
+  <body>
+     <!--Please Code HTML tags Here in the Body Tag-->
+     <header>
+      <h1>Abhishek Bochare</h1>
+      <p>Web Developer | Designer | Problem Solver</p>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! I am a passionate developer with expertise in creating interactive web applications.</p>
+      <img src="https://drive.google.com/file/d/17goT9O8E3as4OshuO-2VjdxHDS8JN0Ym/view?usp=sharing" alt="Profile Picture" class="profile-pic">
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li class="skill">HTML</li>
+        <li class="skill">CSS</li>
+        <li class="skill">JavaScript</li>
+        <li class="skill">React</li>
+        <li class="skill">Problem Solving</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Project 1</h3>
+        <p>Developed a fully responsive e-commerce website.</p>
+        <a href="#">Live Demo</a>
+      </div>
+      <div class="project">
+        <h3>Project 2</h3>
+        <p>Created a portfolio showcasing my work.</p>
+        <a href="#">Live Demo</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <button id="contact-btn">Contact Info</button>
+      <p id="contact-info" style="display: none;">
+        Email: abhishekbochare2003@gmail.com<br>
+        Phone: +919623910270
+      </p>
+    </section>
+
+     
+  </body>
+  <script >
+    // Please Select The HTML Tags Created Above and Attach Events Here
+    const contactBtn = document.getElementById('contact-btn');
+      const contactInfo = document.getElementById('contact-info');
+
+      contactBtn.addEventListener('click', () => {
+        contactInfo.style.display = 'block';
+      });
+
+      const skills = document.querySelectorAll('.skill');
+
+      skills.forEach(skill => {
+        skill.addEventListener('mouseover', () => {
+          skill.style.backgroundColor = '#005bb5';
+          skill.style.color = 'white';
+        });
+        skill.addEventListener('mouseout', () => {
+          skill.style.backgroundColor = '#f0f0f0';
+          skill.style.color = '#333';
+        });
+      });
+  </script>
+</html>
